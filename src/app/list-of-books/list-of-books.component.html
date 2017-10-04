@@ -1,5 +1,8 @@
       <div class="listOfBooks">
          <ul>
-              <li> *ngFor="let book of listOfBooks"</li>
+              <li *ngFor="let book of listOfBooks">
+                  <p>{{book.title}}</p>
+                <img src="{{book.imgUrl}}" alt="{{book.title}"> <button>Zarezerwuj</button>                  
+              </li>
          </ul> 
       </div>
