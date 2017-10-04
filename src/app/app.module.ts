@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MainAppComponent } from './main-app/main-app.component';
-import { Is3Component } from './is3/is3.component';
+import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainAppComponent,
-    Is3Component
+    ListOfBooksComponent,
   ],
   imports: [
     BrowserModule
