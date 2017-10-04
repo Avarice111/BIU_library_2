@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Is3Component } from './is3.component';
+import { ListOfBooksComponent } from './list-of-books.component';
 
-describe('Is3Component', () => {
-  let component: Is3Component;
-  let fixture: ComponentFixture<Is3Component>;
+describe('ListOfBooksComponent', () => {
+  let component: ListOfBooksComponent;
+  let fixture: ComponentFixture<ListOfBooksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Is3Component ]
+      declarations: [ ListOfBooksComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Is3Component);
+    fixture = TestBed.createComponent(ListOfBooksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
