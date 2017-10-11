@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'main-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
   }
+
+  user = 'User1';
+  mails = ['google mail', 'wp mail', 'spam mail', 'job offer mail'];
 
 }
