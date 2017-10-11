@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuListOfBooksModel} from './menu-list-of-books-model';
-
+import {MenuListOfBooksModel} from './MenuListOfBooksModel';
+import {BooksCategoriesService} from './BooksCategoriesService';
+import {lifecycleHookToNodeFlag} from "@angular/compiler/src/view_compiler/provider_compiler";
 
 @Component({
   selector: 'app-menu-list-of-books',
@@ -9,19 +10,16 @@ import {MenuListOfBooksModel} from './menu-list-of-books-model';
 })
 export class MenuListOfBooksComponent implements OnInit {
 
-  listOfCategories= [
-    new MenuListOfBooksModel ('Nauka', ['Programowanie', 'Chemia'] ),
-    new MenuListOfBooksModel( 'Historia', ['Średniowecze', 'Renesans' , 'Współczesność'] ),
-    new MenuListOfBooksModel('Sztuka', ['Średniowecze', 'Renesans' , 'Współczesność'] )
-  ];
+  listOfCategories: MenuListOfBooksModel[];
 
-  constructor() {
+
+  constructor(private service: BooksCategoriesService) {
 
   }
 
 
   ngOnInit() {
-
+    this.listOfCategories =  this.service.getListOfCategories();
   }
 
 }
