@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuListOfBooksModel} from './MenuListOfBooksModel';
 import {BooksCategoriesService} from './BooksCategoriesService';
-import {lifecycleHookToNodeFlag} from "@angular/compiler/src/view_compiler/provider_compiler";
+import {ThrobberComponent} from '../throbber/throbber.component';
 
 @Component({
   selector: 'app-menu-list-of-books',
@@ -11,13 +11,16 @@ import {lifecycleHookToNodeFlag} from "@angular/compiler/src/view_compiler/provi
 export class MenuListOfBooksComponent implements OnInit {
 
   listOfCategories: MenuListOfBooksModel[];
+  public isLoading: boolean;
 
 
   constructor(private service: BooksCategoriesService) {
   }
 
   ngOnInit() {
+    this.isLoading = true;
     this.listOfCategories =  this.service.getListOfCategories();
+    this.isLoading = false;
   }
 
 }

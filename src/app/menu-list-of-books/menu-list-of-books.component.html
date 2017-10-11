@@ -1,4 +1,5 @@
 <div>
+  <app-throbber [isVisible]="isLoading"></app-throbber>
 <ul>
   <li *ngFor="let category of listOfCategories">
     {{category.name}}

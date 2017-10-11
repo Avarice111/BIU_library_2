@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Visibility} from "tslint/lib/rules/completedDocsRule";
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-throbber',
@@ -8,30 +8,14 @@ import {Visibility} from "tslint/lib/rules/completedDocsRule";
 })
 export class ThrobberComponent implements OnInit {
 
-  private _isVissible: boolean;
+  @Input()
+  public isVisible: boolean;
 
   constructor() { }
 
-
-  get isVissible(): boolean {
-    return this._isVissible;
-  }
-
   ngOnInit() {
-    this._isVissible = true;
-    //TODO to trzeba wyrzucić bo będzie automatycznie znikal
-    setTimeout(() =>
-      {
-       this.setThrobberVisibility(false);
-      },
-      3000);
+    this.isVisible = true;
   }
-
-  public setThrobberVisibility(isVisible: boolean){
-    this._isVissible = isVisible;
-  }
-
-
 
 
 }
