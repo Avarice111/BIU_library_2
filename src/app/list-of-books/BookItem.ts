@@ -1,11 +1,13 @@
-class BookItem
+export class BookItem
 {
-    imgUrl: string;
-    title: string;
+    public imgUrl: string;
+    public title: string;
 
     constructor(imgUrl: string, title: string)
     {
         this.imgUrl = imgUrl;
         this.title = title;
     }
+
+
 }

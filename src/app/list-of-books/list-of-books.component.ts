@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookItem } from './BookItem';
 
 @Component({
   selector: 'list-of-books',
