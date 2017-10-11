@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuListOfBooksModel} from './menu-list-of-books-model';
+
 
 @Component({
   selector: 'app-menu-list-of-books',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListOfBooksComponent implements OnInit {
 
-  constructor() { }
+  listOfCategories= [
+    new MenuListOfBooksModel ('Nauka', ['Programowanie', 'Chemia'] ),
+    new MenuListOfBooksModel( 'Historia', ['Średniowecze', 'Renesans' , 'Współczesność'] ),
+    new MenuListOfBooksModel('Sztuka', ['Średniowecze', 'Renesans' , 'Współczesność'] )
+  ];
+
+  constructor() {
+
+  }
+
 
   ngOnInit() {
+
   }
 
 }
