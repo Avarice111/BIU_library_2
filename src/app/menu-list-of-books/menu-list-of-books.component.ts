@@ -14,9 +14,7 @@ export class MenuListOfBooksComponent implements OnInit {
 
 
   constructor(private service: BooksCategoriesService) {
-
   }
-
 
   ngOnInit() {
     this.listOfCategories =  this.service.getListOfCategories();

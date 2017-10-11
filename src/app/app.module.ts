@@ -8,6 +8,7 @@ import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuListOfBooksComponent } from './menu-list-of-books/menu-list-of-books.component';
 import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';
+import { ThrobberComponent } from './throbber/throbber.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesServic
     ListOfBooksComponent,
     HeaderComponent,
     MenuListOfBooksComponent,
+    ThrobberComponent,
   ],
   imports: [
     BrowserModule
