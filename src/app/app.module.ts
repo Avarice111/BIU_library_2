@@ -6,8 +6,9 @@ import { MainAppComponent } from './main-app/main-app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 import { MenuListOfBooksComponent } from './menu-list-of-books/menu-list-of-books.component';
-import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';
+import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';/
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesServic
     MenuComponent,
     ListOfBooksComponent,
     HeaderComponent,
+    ProductPageComponent,
     MenuListOfBooksComponent,
   ],
   imports: [
