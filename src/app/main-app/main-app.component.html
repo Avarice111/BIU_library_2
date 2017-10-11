@@ -1,3 +1,10 @@
 <p>
-  main-app works!
+
+{{model.title}}
+{{model.author.name}}
 </p>
+<ul>
+  <li *ngFor="let letter of model.letters">
+    {{letter}}
+  </li>
+</ul>
