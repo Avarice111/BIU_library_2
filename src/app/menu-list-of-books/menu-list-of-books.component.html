@@ -1,29 +1,14 @@
 <div>
-  <ul>
-    <li>
-      Nauka
-      <ul>
-        <li>
-          Programowanie
-        </li>
-        <li>
-          Chemia
-        </li>
-      </ul>
-    </li>
-    <li>
-      Historia
-      <ul>
-        <li>
-          Średniowiecze
-        </li>
-        <li>
-          Rmantyzm
-        </li>
-        <li>
-          Współczesność
-        </li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+  <li *ngFor="let category of listOfCategories">
+    {{category.name}}
+    <ul>
+      <li *ngFor="let subCategory of category.subCategories">
+        {{subCategory}}
+      </li>
+    </ul>
+  </li>
+</ul>
 </div>
+
+
