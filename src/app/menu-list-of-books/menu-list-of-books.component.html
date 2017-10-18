@@ -1,4 +1,17 @@
 
+<div>
+  <app-throbber [isVisible]="isLoading"></app-throbber>
+<ul>
+  <li *ngFor="let category of listOfCategories">
+    {{category.name}}
+    <ul>
+      <li *ngFor="let subCategory of category.subCategories">
+        {{subCategory}}
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
 <h4>Kategorie</h4>
 <div class="btn-group">
 
@@ -12,7 +25,7 @@
     </div>
   </div>
   </div>
-  
+
   <div class="btn-group">
   <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,7 +37,7 @@
         <a class="dropdown-item" href="#">Współczesność</a>
       </div>
     </div>
-    
+
   </div>
 
 
