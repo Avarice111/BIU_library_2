@@ -13,6 +13,7 @@ import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesServic
 
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { ThrobberComponent } from './throbber/throbber.component';
+import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MenuListOfBooksComponent,
     AddBookFormComponent,
     ThrobberComponent,
+    BookFinderComponent,
     ContactFormComponent
   ],
   imports: [
