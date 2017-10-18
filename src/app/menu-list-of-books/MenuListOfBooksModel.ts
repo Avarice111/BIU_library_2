@@ -6,6 +6,4 @@ export class MenuListOfBooksModel {
     this.name = name;
     this.subCategories = subCategories;
   }
-
-
 }
