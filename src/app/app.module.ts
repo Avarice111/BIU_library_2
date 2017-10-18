@@ -10,6 +10,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { MenuListOfBooksComponent } from './menu-list-of-books/menu-list-of-books.component';
 import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';
 import { ThrobberComponent } from './throbber/throbber.component';
+import { BookFinderComponent } from './book-finder/book-finder.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ThrobberComponent } from './throbber/throbber.component';
     ProductPageComponent,
     MenuListOfBooksComponent,
     ThrobberComponent,
+    BookFinderComponent,
   ],
   imports: [
     BrowserModule
