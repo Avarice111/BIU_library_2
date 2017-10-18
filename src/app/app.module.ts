@@ -27,7 +27,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     ContactFormComponent,
     AddBookFormComponent,
     ThrobberComponent,
-    IS47_contact_form
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
