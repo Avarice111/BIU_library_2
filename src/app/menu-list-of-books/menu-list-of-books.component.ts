@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuListOfBooksModel} from './MenuListOfBooksModel';
+import {BooksCategoriesService} from './BooksCategoriesService';
+import {lifecycleHookToNodeFlag} from "@angular/compiler/src/view_compiler/provider_compiler";
 
 @Component({
   selector: 'app-menu-list-of-books',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListOfBooksComponent implements OnInit {
 
-  constructor() { }
+  listOfCategories: MenuListOfBooksModel[];
+
+
+  constructor(private service: BooksCategoriesService) {
+
+  }
+
 
   ngOnInit() {
+    this.listOfCategories =  this.service.getListOfCategories();
   }
 
 }
