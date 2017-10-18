@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderService} from './service';
+import {HeaderComponentModel} from './model';
+
 
 @Component({
   selector: 'main-header',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  header: HeaderService = new HeaderService();
+  model: HeaderComponentModel = this.header._model;
+
+
   ngOnInit(): void {
   }
-
-  user = 'User1';
-  mails = ['google mail', 'wp mail', 'spam mail', 'job offer mail'];
 
 }

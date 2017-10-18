@@ -1,0 +1,29 @@
+#title{
+	margin: 5px;
+	text-decoration: bold;
+}
+
+
+#gallery{
+	background-color: Wheat;
+}
+
+#cover{
+	float: left;
+	display: block;
+
+}
+
+#description {
+	margin: 5px;
+	float: left;
+	text-align: left;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+#buttons {
+	margin: 5px	;
+	display: block;
+	float: left;
+}
