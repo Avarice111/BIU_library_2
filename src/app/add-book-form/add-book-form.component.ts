@@ -3,7 +3,7 @@ import {BooksCategoriesService} from "../menu-list-of-books/BooksCategoriesServi
 import {MenuListOfBooksModel} from "../menu-list-of-books/MenuListOfBooksModel";
 
 @Component({
-  selector: 'app-add-book-form',
+  selector: 'add-book-form',
   templateUrl: './add-book-form.component.html',
   styleUrls: ['./add-book-form.component.css']
 })

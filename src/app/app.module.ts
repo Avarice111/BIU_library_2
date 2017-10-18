@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainAppComponent } from './main-app/main-app.component';
@@ -25,7 +26,8 @@ import { ThrobberComponent } from './throbber/throbber.component';
     ThrobberComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [BooksCategoriesService],
   bootstrap: [AppComponent]
