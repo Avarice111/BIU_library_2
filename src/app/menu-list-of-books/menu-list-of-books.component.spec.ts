@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuListOfBooksComponent } from './menu-list-of-books.component';
+import {ThrobberComponent} from '../throbber/throbber.component';
 import {MenuListOfBooksModel} from './MenuListOfBooksModel';
 
 describe('MenuListOfBooksComponent', () => {
