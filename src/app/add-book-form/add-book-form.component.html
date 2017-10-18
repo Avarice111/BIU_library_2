@@ -1,0 +1,36 @@
+<div class="form-group col-md-3">
+  <form >
+    Tytuł:<br>
+    <input type="text" name="title">
+    <br>
+    ISBN:<br>
+    <input type="text" name="isbn">
+
+    <br>Autor:<br>
+    <input type="text" name="author">
+    <br>
+    Spis treści:<br>
+    <input type="text" name="contents">
+    <br>
+    Opis:<br>
+    <input type="text" name="description">
+    <br>
+    Tagi:<br>
+    <select multiple name="tags" *ngFor="let tag of listOfTags">
+      <option value="{{tag}}">{{tag}}</option>
+    </select>
+    <br>
+    Kategorie:<br>
+    <select multiple name="categories" *ngFor="let category of listOfCategories">
+      <option value="{{category}}">{{category}}</option>
+    </select>
+    <!--Jeśli zostanie wybrana kategoria to ma sie pojawić okienko z subkategoriami-->
+    <div [hidden]="!_isSubCategoriesVissible">
+      Subkategorie:<br>
+      <select multiple name="categories" *ngFor="let subcategory of listOfSubcategories">
+        <option value="{{subcategory}}">{{subcategory}}</option>
+      </select>
+    </div>
+
+  </form>
+</div>
