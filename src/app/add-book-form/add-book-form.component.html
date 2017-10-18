@@ -51,12 +51,13 @@
       </select></div>
 
     <div>Kategorie:<br>
-      <select multiple name="categories" *ngFor="let category of listOfCategories">
-        <option value="{{category}}">{{category}}</option>
+      <select multiple name="categories" >
+        <option *ngFor="let category of listOfCategories" value="{{category.name}}">{{category.name}}</option>
       </select></div>
     <!--Jeśli zostanie wybrana kategoria to ma sie pojawić okienko z subkategoriami-->
     <div>
-      <div [hidden]="!_isSubCategoriesVissible">
+      <!--<div [hidden]="!_isSubCategoriesVissible">-->
+      <div [hidden]="true">
         Subkategorie:<br>
         <select multiple name="categories" *ngFor="let subcategory of listOfSubcategories">
           <option value="{{subcategory}}">{{subcategory}}</option>
