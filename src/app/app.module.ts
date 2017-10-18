@@ -24,7 +24,6 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     HeaderComponent,
     ProductPageComponent,
     MenuListOfBooksComponent,
-    ContactFormComponent,
     AddBookFormComponent,
     ThrobberComponent,
     ContactFormComponent
