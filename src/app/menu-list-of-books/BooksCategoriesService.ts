@@ -8,7 +8,6 @@ export class BooksCategoriesService {
   public  getListOfCategories(): MenuListOfBooksModel[] {
     //Tutaj będzie import prawdziwej listy
     //TODO wywalić statyczność
-
     return [
       new MenuListOfBooksModel ('Nauka', ['Programowanie', 'Chemia'] ),
       new MenuListOfBooksModel( 'Historia', ['Średniowecze', 'Renesans' , 'Współczesność'] ),

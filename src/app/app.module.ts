@@ -8,7 +8,8 @@ import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { MenuListOfBooksComponent } from './menu-list-of-books/menu-list-of-books.component';
-import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';/
+import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';
+import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesServic
     HeaderComponent,
     ProductPageComponent,
     MenuListOfBooksComponent,
+    AddBookFormComponent,
   ],
   imports: [
     BrowserModule
