@@ -59,8 +59,8 @@
       <!--<div [hidden]="!_isSubCategoriesVissible">-->
       <div [hidden]="true">
         Subkategorie:<br>
-        <select multiple name="categories" *ngFor="let subcategory of listOfSubcategories">
-          <option value="{{subcategory}}">{{subcategory}}</option>
+        <select multiple name="categories" >
+          <option *ngFor="let subcategory of listOfSubcategories" value="{{subcategory}}">{{subcategory}}</option>
         </select>
       </div>
     </div>
