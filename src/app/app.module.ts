@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { MenuListOfBooksComponent } from './menu-list-of-books/menu-list-of-books.component';
 import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesService';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {BooksCategoriesService} from './menu-list-of-books/BooksCategoriesServic
     HeaderComponent,
     ProductPageComponent,
     MenuListOfBooksComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule
