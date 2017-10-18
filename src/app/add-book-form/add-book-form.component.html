@@ -1,35 +1,67 @@
 <div class="form-group col-md-3">
-  <form >
-    Tytuł:<br>
-    <input type="text" name="title">
-    <br>
-    ISBN:<br>
-    <input type="text" name="isbn">
+  <form>
+    <div>Tytuł:<br>
+      <input type="text" name="title" class="form-control"
+             required
+             #title="ngModel"
+             [(ngModel)]="book.title"
+             [class.has-error]="title.invalid && title.touched"
+      />
+      <div
+        *ngIf="title.invalid && title.touched">
+        <div class="text-danger">Title must be filled</div>
+      </div>
+    </div>
+    <div>ISBN:<br>
+      <input type="number" name="isbn" class="form-control"
+             required
+             #isbn="ngModel"
+             [(ngModel)]="book.isbn"
+             [class.has-error]="isbn.invalid && isbn.touched"
+      />
+      <div
+        *ngIf="isbn.invalid && isbn.touched">
+        <span class="text-danger">ISBN must be filled</span>
+      </div>
+    </div>
+    <div>
+      Autor:<br>
+      <input type="text" name="author" class="form-control"
+             required
+             #author="ngModel"
+             [(ngModel)]="book.author"
+             [class.has-error]="author.invalid && author.touched"/>
+      <div
+        *ngIf="author.invalid && author.touched">
+        <span class="text-danger">Autor must be filled</span>
+      </div>
+    </div>
+    <div>
+      <br>Spis treści:<br>
+      <input type="text" name="contents">
+    </div>
+    <div>Opis:<br>
+      <input type="text" name="description">
+    </div>
 
-    <br>Autor:<br>
-    <input type="text" name="author">
-    <br>
-    Spis treści:<br>
-    <input type="text" name="contents">
-    <br>
-    Opis:<br>
-    <input type="text" name="description">
-    <br>
-    Tagi:<br>
-    <select multiple name="tags" *ngFor="let tag of listOfTags">
-      <option value="{{tag}}">{{tag}}</option>
-    </select>
-    <br>
-    Kategorie:<br>
-    <select multiple name="categories" *ngFor="let category of listOfCategories">
-      <option value="{{category}}">{{category}}</option>
-    </select>
+    <div>
+      Tagi:<br>
+      <select multiple name="tags" *ngFor="let tag of listOfTags">
+        <option value="{{tag}}">{{tag}}</option>
+      </select></div>
+
+    <div>Kategorie:<br>
+      <select multiple name="categories" *ngFor="let category of listOfCategories">
+        <option value="{{category}}">{{category}}</option>
+      </select></div>
     <!--Jeśli zostanie wybrana kategoria to ma sie pojawić okienko z subkategoriami-->
-    <div [hidden]="!_isSubCategoriesVissible">
-      Subkategorie:<br>
-      <select multiple name="categories" *ngFor="let subcategory of listOfSubcategories">
-        <option value="{{subcategory}}">{{subcategory}}</option>
-      </select>
+    <div>
+      <div [hidden]="!_isSubCategoriesVissible">
+        Subkategorie:<br>
+        <select multiple name="categories" *ngFor="let subcategory of listOfSubcategories">
+          <option value="{{subcategory}}">{{subcategory}}</option>
+        </select>
+      </div>
     </div>
 
   </form>
