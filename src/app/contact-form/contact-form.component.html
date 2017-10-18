@@ -1,7 +1,7 @@
 
 
-<form>
-<h2>DANE PERSONALNE</h2>
+<form #myForm="ngForm">
+<h4>DANE PERSONALNE</h4>
 <div class="form-group">
   <label for="insertName">Imię: </label>
   <input type="text" required class="form-control" id="insertName" placeholder="Podaj Imię">
@@ -16,48 +16,36 @@
 </div>
 
 
-<h2>DANE ADRESOWE</h2>
+<h4>DANE ADRESOWE</h4>
 
-<p>Adres zameldowania: </p>
+<h5>Adres zameldowania: </h5>
 
 <div class="form-group">
-  <label for="insertPostCode"></label>
+  <label for="insertPostCode">Kod pocztowy: </label>
   <input type="text" required class="form-control" id="insertPostCode" placeholder="Podaj kod pocztowy">
-  <label for="insertCity"></label>
+  <label for="insertCity">Miasto: </label>
   <input type="text" required class="form-control" id="insertCity" placeholder="Podaj miasto">
+  <label for="insertStreet">Ulica: </label>
+  <input type="text" required class="form-control" id="insertStreet" placeholder="Podaj ulicę">
+  <label for="insertNumber">Numer domu: </label>
+  <input type="number" required class="form-control" id="insertNumber" placeholder="Podaj numer">
  </div>
 
-<div class="form-group">
-  <label for="insertStreet"></label>
-  <input type="text" required class="form-control" id="insertStreet" placeholder="Podaj ulicę">
-</div>
-<div class="form-group">
-  <label for="insertNumber"></label>
-  <input type="number" required class="form-control" id="insertNumber" placeholder="Podaj numer">
-</div>
-
-<p>Adres korespondencyjny: </p>
+<h5>Adres korespondencyjny: </h5>
 
 <div class="form-group">
-  <label for="insertPostCode"></label>
+  <label for="insertPostCode">Kod pocztowy: </label>
   <input type="text" required class="form-control" id="insertPostCode" placeholder="Podaj kod pocztowy" pattern="[0-9]\{2}-[0-9]{2}" >
-</div>
-<div class="form-group">
-  <label for="insertCity"></label>
+  <label for="insertCity">Miasto: </label>
   <input type="text" required class="form-control" id="insertCity" placeholder="Podaj miasto">
-</div>
-
-<div class="form-group">
-  <label for="insertStreet"></label>
+  <label for="insertStreet">Ulica: </label>
   <input type="text" required class="form-control" id="insertStreet" placeholder="Podaj ulicę">
-</div>
-<div class="form-group">
-  <label for="insertNumber"></label>
+  <label for="insertNumber">Numer domu: </label>
   <input type="number" required class="form-control" id="insertNumber" placeholder="Podaj numer" pattern="[0-9]" maxlength="5" minlength="1">
 </div>
 
 
-<h2>DANE KONTAKTOWE</h2>
+<h4>DANE KONTAKTOWE</h4>
 <div>
 <div class="form-group">
   <label for="insertHomeNumber">Telefon stacjonarny: </label>
