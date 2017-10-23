@@ -1,18 +1,22 @@
 
 
-<form #myForm="ngForm">
+<form #myForm="ngForm" novalidate>
 <h4>Dane personalne</h4>
 <div class="form-group">
-  <label for="insertName">Imię: </label>
-  <input type="text"  required class="form-control" id="insertName" placeholder="Podaj Imię">
+  <label for="name">Imię: </label>
+  <input type="text" [(ngModel)]="personalData.name" #name="ngModel" required class="form-control" id="name" placeholder="Podaj Imię"
+  [class.has-error]="name.invalid && name.touched" pattern="[A-Za-z]">
+ <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+  <p> Niepoprawnie wypełnione pole!</p>
+ </div>
 </div>
 <div class="form-group">
   <label for="insertSurname">Nazwisko: </label>
-  <input type="text" required class="form-control" id="insertSurname" placeholder="Podaj Nazwisko">
+  <input type="text" required class="form-control" id="insertSurname" placeholder="Podaj Nazwisko" pattern="[A-Za-z]">
 </div>
 <div class="form-group">
   <label for="insertPesel">PESEL: </label>
-  <input type="number" required class="form-control" id="insertPesel" placeholder="Podaj PESEL">
+  <input type="number" required class="form-control" id="insertPesel" placeholder="Podaj PESEL" pattern="[0-9]\{11}">
 </div>
 
 
@@ -58,6 +62,6 @@
 </div>
 
 <p>
-<button type="submit" class="btn btn-primary">Wyślij formularz</button>
+<button type="submit" class="btn btn-primary" [disabled]="myForm.invalid && myForm.touched">Wyślij formularz</button>
 </p>
 </form>
