@@ -3,20 +3,26 @@
 <form #myForm="ngForm" novalidate>
 <h4>Dane personalne</h4>
 <div class="form-group">
-  <label for="name">Imię: </label>
-  <input type="text" [(ngModel)]="personalData.name" #name="ngModel" required class="form-control" id="name" placeholder="Podaj Imię"
-  [class.has-error]="name.invalid && name.touched" pattern="[A-Za-z]">
+  <label>Imię: </label>
+  <input type="text" [(ngModel)]="personalData.name" #name="ngModel" required class="form-control" name="name" placeholder="Podaj Imię"
+  pattern="[A-Za-z]*">
  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
   <p> Niepoprawnie wypełnione pole!</p>
  </div>
 </div>
 <div class="form-group">
-  <label for="insertSurname">Nazwisko: </label>
-  <input type="text" required class="form-control" id="insertSurname" placeholder="Podaj Nazwisko" pattern="[A-Za-z]">
+  <label>Nazwisko: </label>
+  <input type="text" [(ngModel)]="personalData.surname" #surname="ngModel" required class="form-control" name="surname" placeholder="Podaj Nazwisko" pattern="[A-Za-z]*">
+   <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" class="alert alert-danger">
+  <p> Niepoprawnie wypełnione pole!</p>
+ </div>
 </div>
 <div class="form-group">
-  <label for="insertPesel">PESEL: </label>
-  <input type="number" required class="form-control" id="insertPesel" placeholder="Podaj PESEL" pattern="[0-9]\{11}">
+  <label>PESEL: </label>
+  <input type="number" [(ngModel)]="personalData.pesel" #pesel="ngModel" required class="form-control" name="pesel" placeholder="Podaj PESEL" pattern="[0-9]{11}">
+  <div *ngIf="pesel.invalid && (pesel.dirty || pesel.touched)" class="alert alert-danger">
+  <p> Niepoprawnie wypełnione pole!</p>
+ </div>
 </div>
 
 
@@ -26,26 +32,26 @@
 
 <div class="form-group">
   <label for="insertPostCode">Kod pocztowy: </label>
-  <input type="text" required class="form-control" id="insertPostCode" placeholder="Podaj kod pocztowy">
+  <input type="text" required class="form-control" name="insertPostCode" placeholder="Podaj kod pocztowy">
   <label for="insertCity">Miasto: </label>
-  <input type="text" required class="form-control" id="insertCity" placeholder="Podaj miasto">
+  <input type="text" required class="form-control" name="insertCity" placeholder="Podaj miasto">
   <label for="insertStreet">Ulica: </label>
-  <input type="text" required class="form-control" id="insertStreet" placeholder="Podaj ulicę">
+  <input type="text" required class="form-control" name="insertStreet" placeholder="Podaj ulicę">
   <label for="insertNumber">Numer domu: </label>
-  <input type="number" required class="form-control" id="insertNumber" placeholder="Podaj numer">
+  <input type="number" required class="form-control" name="insertNumber" placeholder="Podaj numer">
  </div>
 
 <h5>Adres korespondencyjny: </h5>
 
 <div class="form-group">
   <label for="insertPostCode">Kod pocztowy: </label>
-  <input type="text" required class="form-control" id="insertPostCode" placeholder="Podaj kod pocztowy" pattern="[0-9]\{2}-[0-9]{2}" >
+  <input type="text" required class="form-control" name="insertPostCode" placeholder="Podaj kod pocztowy" pattern="[0-9]\{2}-[0-9]{2}" >
   <label for="insertCity">Miasto: </label>
-  <input type="text" required class="form-control" id="insertCity" placeholder="Podaj miasto">
+  <input type="text" required class="form-control" name="insertCity" placeholder="Podaj miasto">
   <label for="insertStreet">Ulica: </label>
-  <input type="text" required class="form-control" id="insertStreet" placeholder="Podaj ulicę">
+  <input type="text" required class="form-control" name="insertStreet" placeholder="Podaj ulicę">
   <label for="insertNumber">Numer domu: </label>
-  <input type="number" required class="form-control" id="insertNumber" placeholder="Podaj numer" pattern="[0-9]" maxlength="5" minlength="1">
+  <input type="number" required class="form-control" name="insertNumber" placeholder="Podaj numer" pattern="[0-9]" maxlength="5" minlength="1">
 </div>
 
 
@@ -53,11 +59,11 @@
 <div>
 <div class="form-group">
   <label for="insertHomeNumber">Telefon stacjonarny: </label>
-  <input type="number"  class="form-control" id="insertHomeNumber" placeholder="Podaj numer stacjonarny" pattern="[0-9]" maxlength="9" minlength="9">
+  <input type="number"  class="form-control" name="insertHomeNumber" placeholder="Podaj numer stacjonarny" pattern="[0-9]" maxlength="9" minlength="9">
 </div>
 <div class="form-group">
   <label for="insertMobileNuber">Telefon komórkowy: </label>
-  <input type="number" class="form-control" id="insertMobileNuber" placeholder="Podaj numer komórkowy" pattern="[0-9]" maxlength="9" minlength="9">
+  <input type="number" class="form-control" name="insertMobileNuber" placeholder="Podaj numer komórkowy" pattern="[0-9]" maxlength="9" minlength="9">
 </div>
 </div>
 

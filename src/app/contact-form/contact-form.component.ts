@@ -10,7 +10,7 @@ import { PersonalDataModel } from './model';
 })
 export class ContactFormComponent implements OnInit {
 
-  public personalData = new PersonalDataModel('', '', 0);
+  public personalData = new PersonalDataModel(null,null,null);
 
   constructor() { }
 
