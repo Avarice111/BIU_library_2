@@ -15,6 +15,7 @@ import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { ThrobberComponent } from './throbber/throbber.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     AddBookFormComponent,
     ThrobberComponent,
     BookFinderComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
