@@ -18,6 +18,9 @@ import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { routes } from './app.routes';
+import { LoginComponent } from './user-profile/login/login.component';
+import { RegisterComponent } from './user-profile/register/register.component';
+import { ChangePasswordComponent } from './user-profile/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { routes } from './app.routes';
     ThrobberComponent,
     BookFinderComponent,
     ContactFormComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    LoginComponent,
+    RegisterComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
