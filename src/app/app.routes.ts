@@ -26,6 +26,11 @@ export var routes:Routes=[
             {
                 path:'books',
                 component:ListOfBooksComponent
+            },
+            {
+                path:'advsearch',
+                component:BookFinderComponent
+                
             }
         ]
     },  
@@ -49,10 +54,7 @@ export var routes:Routes=[
     path:'login',
     component:LoginComponent
   },
-    {
-        path:'advsearch',
-        component:BookFinderComponent
-    },
+    
     {
         path:'**',
         redirectTo:'/home'
