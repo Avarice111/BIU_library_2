@@ -18,6 +18,7 @@ import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { routes } from './app.routes';
+import { LoginComponent } from './user-profile/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { routes } from './app.routes';
     ThrobberComponent,
     BookFinderComponent,
     ContactFormComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

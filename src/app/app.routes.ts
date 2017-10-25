@@ -15,4 +15,5 @@ export var routes:Routes=[
         path:'**',
         redirectTo:'/home'
     }
+
 ];
