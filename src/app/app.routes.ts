@@ -8,8 +8,7 @@ import {LoginComponent} from './user-profile/login/login.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
-import { AddBookFormComponent } from './add-book-form/add-book-form.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+
 
 export var routes:Routes=[
     {
@@ -37,21 +36,16 @@ export var routes:Routes=[
     component:LoginComponent
   },
     {
-        path:'book',
-        component:ProductPageComponent
+        path:'listOfBooks',
+        component:ListOfBooksComponent
+    },
+    {
+        path:'advsearch',
+        component:BookFinderComponent
     },
     {
         path:'books',
         component:ListOfBooksComponent
-    },
-  {
-        path:'addBook',
-        component: AddBookFormComponent
-        
-    }, 
-    {
-        path:'shoppingCart',
-        component: ShoppingCartComponent
     },
     {
         path:'book',
