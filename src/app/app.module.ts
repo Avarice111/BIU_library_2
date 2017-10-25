@@ -20,6 +20,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { routes } from './app.routes';
 import { LoginComponent } from './user-profile/login/login.component';
 import { RegisterComponent } from './user-profile/register/register.component';
+import { ChangePasswordComponent } from './user-profile/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RegisterComponent } from './user-profile/register/register.component';
     ContactFormComponent,
     UserProfileComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
