@@ -1,10 +1,19 @@
-<p>
+<div class="container">
+  <div class="row">
+      <!-- <main-app></main-app> -->        
+      <div class="col"><main-header></main-header></div>
+      
+      
+  </div>
+  <div class="row">
+      <div class="col"><user-profile></user-profile></div>
+      <div class="col"><app-menu-list-of-books></app-menu-list-of-books></div>
+      <div class="col-6"><list-of-books></list-of-books></div>
+  </div>
 
-{{model.title}}
-{{model.author.name}}
-</p>
-<ul>
-  <li *ngFor="let letter of model.letters">
-    {{letter}}
-  </li>
-</ul>
+      <div class="col"><contact-form></contact-form></div>
+
+  <div>
+      <div class="col"><app-book-finder></app-book-finder></div>
+  </div>
+</div>

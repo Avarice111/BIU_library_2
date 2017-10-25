@@ -7,14 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainAppComponent implements OnInit {
 
-  public model = {
-    title:"NG-Book",
-    author:{
-      name:"John Snnow"
-    },
-    letters:["a","b", "c", "d"]
-  }
-
 
   constructor() { }
 
