@@ -3,8 +3,13 @@
               <li *ngFor="let book of listOfBooks">
                   <p>{{book.title}}</p>
                 <img style="width:100px; height:100px" src="{{book.imgUrl}}" alt="{{book.title}"> 
+<<<<<<< HEAD
                 <button  routerLink="/shoppingCart">Zarezerwuj</button> 
                 <button  routerLink="/book" routerLinkActive="active">Szczegóły</button>   
+=======
+                <button routerLink="/shoppingCart">Zarezerwuj</button> 
+                <button  routerLink="/book/4" routerLinkActive="active">Szczegóły</button>   
+>>>>>>> master
               </li>
          </ul> 
       </div>
