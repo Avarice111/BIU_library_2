@@ -1,3 +1,44 @@
-<p>
-  book-finder works!
-</p>
+<form method="post" action="">
+
+<div class="form-group">
+
+<fieldset>
+
+	<legend>Tytuł</legend>
+		<input type="text" name="tytul" />
+
+	<legend>Autor</legend>
+		<input type="text" name="autor" />
+
+	<legend>Tag</legend>
+		<input type="text" name="tag" />
+
+	<legend>Gatunek</legend>
+		<select name="gatunek">
+		<option></option>
+		<option>Fantastyka</option>
+		<option>Nowela</option>
+		<option>Powieść</option>
+		<option>Thriller</option>
+		</select>
+
+</fieldset>
+</div>
+
+
+<div class="form-check">
+	<fieldset>
+	<legend>Dostępność</legend>
+	  <input type="radio" name="availability" value="available"> Dostępne<br>
+	  <input type="radio" name="availability" value="not_available"> Nie dostępne<br>
+
+	</fieldset>
+</div>
+
+
+<fieldset>
+<legend>Opcje</legend>
+<input type="submit" value="Zapisz kryteria" />
+<input type="submit" value="Szukaj książek" />
+</fieldset>
+</form>
