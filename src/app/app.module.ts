@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainAppComponent } from './main-app/main-app.component';
@@ -16,6 +17,7 @@ import { ThrobberComponent } from './throbber/throbber.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [BooksCategoriesService],
   bootstrap: [AppComponent]
