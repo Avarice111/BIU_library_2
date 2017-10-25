@@ -21,6 +21,7 @@ import { routes } from './app.routes';
 import { LoginComponent } from './user-profile/login/login.component';
 import { RegisterComponent } from './user-profile/register/register.component';
 import { ChangePasswordComponent } from './user-profile/change-password/change-password.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ChangePasswordComponent } from './user-profile/change-password/change-p
     UserProfileComponent,
     LoginComponent,
     RegisterComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
