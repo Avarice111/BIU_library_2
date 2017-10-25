@@ -5,7 +5,6 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {RegisterComponent} from './user-profile/register/register.component';
 import {ChangePasswordComponent} from './user-profile/change-password/change-password.component';
 import {LoginComponent} from './user-profile/login/login.component';
-import { ProductPageComponent } from './product-page/product-page.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 
@@ -13,11 +12,26 @@ import { BookFinderComponent } from './book-finder/book-finder.component';
 export var routes:Routes=[
     {
         path:'',
-        component:MainAppComponent
+        component:MainAppComponent,
+        children:[
+            {
+                path:'',
+                component:ListOfBooksComponent
+            },
+            {
+                path:'book',
+                component:ProductPageComponent
+            },
+            
+            {
+                path:'books',
+                component:ListOfBooksComponent
+            }
+        ]
     },  
     {
         path:'home',
-        component:MainAppComponent
+        redirectTo:''
     },
   {
     path:'profile',
@@ -36,24 +50,8 @@ export var routes:Routes=[
     component:LoginComponent
   },
     {
-        path:'listOfBooks',
-        component:ListOfBooksComponent
-    },
-    {
         path:'advsearch',
         component:BookFinderComponent
-    },
-    {
-        path:'books',
-        component:ListOfBooksComponent
-    },
-    {
-        path:'book',
-        component:ProductPageComponent
-    },
-    {
-        path:'books',
-        component:ListOfBooksComponent
     },
     {
         path:'**',
