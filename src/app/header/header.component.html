@@ -1,19 +1,17 @@
 <header class="mails">
-<div>
+  <div>
     <div class="row">
 
-  
-      <div class="col"><img src="https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png" height="50px" width="150px"></div>
-      <div class="col">Login: <label> <input type="text"/></label></div>
-      
-      <div class="w-100"></div>
 
-      <div class="col"></div>
-            
-      <div class="col">You are logged as: {{user}}</div>
-      
-   
-      
-</div>
-</div>
+      <div class="col"><img src="https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png"
+                            height="50px" width="150px"></div>
+      <div class="col"><a class="btn" routerLink="/advsearch">Search...</a></div>
+      <app-login></app-login>
+      <div class="col">
+        <a href="/register">
+          <button type="btn">Register</button>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
