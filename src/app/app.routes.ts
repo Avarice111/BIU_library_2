@@ -20,7 +20,7 @@ export var routes:Routes=[
                 component:ListOfBooksComponent
             },
             {
-                path:'book',
+                path:'book/:bookid',
                 component:BookPageComponent
             },
             
