@@ -1,3 +1,14 @@
-<p>
-  Koszyk działa :)
-</p>
+<div class=shoppingCart>
+    <p> Koszyk działa :) </p>
+    <div class="listOfAddedBooks">
+        <ul>
+             <li *ngFor="let book of listOfAddedBooks">
+                 <p>{{book.title}}</p>
+               <img style="width:100px; height:100px" src="{{book.imgUrl}}" alt="{{book.title}"> 
+             </li>
+        </ul> 
+     </div>
+
+  <button routerLink="" routerLinkActive="active">Zamów zawartość</button> <button  routerLink="" routerLinkActive="active">Usuń zawartość</button>
+</div>
+   
