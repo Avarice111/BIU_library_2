@@ -5,6 +5,10 @@ import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 
 export var routes:Routes=[
     {
+        path:'',
+        component:MainAppComponent
+    },  
+    {
         path:'home',
         component:MainAppComponent
     },
@@ -13,17 +17,13 @@ export var routes:Routes=[
         component:BookFinderComponent
     },
     {
-        path:'',
-        component:MainAppComponent
-    },   
-    {
-        path:'**',
-        redirectTo:'/home'
-    },
-    {
         path:'addBook',
         component: AddBookFormComponent
         
+    }, 
+    {
+        path:'**',
+        redirectTo:'/home'
     }
 
 ];
