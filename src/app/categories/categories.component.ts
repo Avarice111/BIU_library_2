@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuListOfBooksModel} from './MenuListOfBooksModel';
+import {CategoriesModel} from './CategoriesModel';
 import {BooksCategoriesService} from './BooksCategoriesService';
 import {ThrobberComponent} from '../throbber/throbber.component';
 
 @Component({
-  selector: 'app-menu-list-of-books',
-  templateUrl: './menu-list-of-books.component.html',
-  styleUrls: ['./menu-list-of-books.component.css']
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.css']
 })
-export class MenuListOfBooksComponent implements OnInit {
+export class CategoriesComponent implements OnInit {
 
-  listOfCategories: MenuListOfBooksModel[];
+  listOfCategories: CategoriesModel[];
   public isLoading: boolean;
 
 

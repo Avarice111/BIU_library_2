@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 import { MainAppComponent } from './main-app/main-app.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import {BookPageComponent} from './book-page/book-page.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {RegisterComponent} from './user-profile/register/register.component';
 import {ChangePasswordComponent} from './user-profile/change-password/change-password.component';
@@ -21,7 +21,7 @@ export var routes:Routes=[
             },
             {
                 path:'book',
-                component:ProductPageComponent
+                component:BookPageComponent
             },
             
             {
