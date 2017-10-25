@@ -7,6 +7,7 @@ import {ChangePasswordComponent} from './user-profile/change-password/change-pas
 import {LoginComponent} from './user-profile/login/login.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 export var routes:Routes=[
@@ -28,6 +29,10 @@ export var routes:Routes=[
                 component:ListOfBooksComponent
             },
             {
+                path: 'shoppingCart', 
+                component:ShoppingCartComponent
+            },
+          {
                 path:'advsearch',
                 component:BookFinderComponent
                 
