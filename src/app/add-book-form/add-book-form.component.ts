@@ -4,6 +4,7 @@ import {MenuListOfBooksModel} from "../menu-list-of-books/MenuListOfBooksModel";
 import {NewBook} from "./NewBook";
 
 @Component({
+
   selector: 'add-book-form',
   templateUrl: './add-book-form.component.html',
   styleUrls: ['./add-book-form.component.css']
