@@ -9,6 +9,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 export var routes:Routes=[
     {
@@ -48,6 +49,10 @@ export var routes:Routes=[
         component: AddBookFormComponent
         
     }, 
+    {
+        path:'shoppingCart',
+        component: ShoppingCartComponent
+    },
     {
         path:'**',
         redirectTo:'/home'
