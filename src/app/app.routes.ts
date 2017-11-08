@@ -8,61 +8,66 @@ import {LoginComponent} from './user-profile/login/login.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {AddBookFormComponent} from './add-book-form/add-book-form.component';
 
 
-export var routes:Routes=[
+export let routes: Routes = [
     {
-        path:'',
-        component:MainAppComponent,
-        children:[
+        path: '',
+        component: MainAppComponent,
+        children: [
             {
-                path:'',
-                component:ListOfBooksComponent
+                path: '',
+                component: ListOfBooksComponent
             },
             {
-                path:'book/:bookid',
-                component:BookPageComponent
+                path: 'book/:bookid',
+                component: BookPageComponent
             },
-            
+
             {
-                path:'books',
-                component:ListOfBooksComponent
+                path: 'books',
+                component: ListOfBooksComponent
             },
             {
-                path: 'shoppingCart', 
-                component:ShoppingCartComponent
+                path: 'shoppingCart',
+                component: ShoppingCartComponent
             },
           {
-                path:'advsearch',
-                component:BookFinderComponent
-                
+                path: 'advsearch',
+                component: BookFinderComponent
+
             }
         ]
-    },  
+    },
     {
-        path:'home',
-        redirectTo:''
+        path: 'home',
+        redirectTo: ''
     },
   {
-    path:'profile',
-    component:UserProfileComponent
+    path: 'profile',
+    component: UserProfileComponent
   },
   {
-    path:'register',
-    component:RegisterComponent
+    path: 'register',
+    component: RegisterComponent
   },
   {
-    path:'change-password',
-    component:ChangePasswordComponent
+    path: 'change-password',
+    component: ChangePasswordComponent
   },
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent
   },
-    
+  {
+    path: 'add-book',
+    component: AddBookFormComponent
+  },
+
     {
-        path:'**',
-        redirectTo:'/home'
+        path: '**',
+        redirectTo: '/home'
     },
-    
+
 ];

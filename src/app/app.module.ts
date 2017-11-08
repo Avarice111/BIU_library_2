@@ -42,7 +42,7 @@ import { TableOfContentsComponentComponent } from './book-page/table-of-contents
     RegisterComponent,
     ChangePasswordComponent,
     ShoppingCartComponent,
-    TableOfContentsComponentComponent
+    TableOfContentsComponentComponent,
   ],
   imports: [
     BrowserModule,
