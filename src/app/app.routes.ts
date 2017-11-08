@@ -8,6 +8,8 @@ import {LoginComponent} from './user-profile/login/login.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { BookFinderComponent } from './book-finder/book-finder.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { MessageDetailsComponent } from './message-details/message-details.component';
+import { ListOfMessagesComponent } from './list-of-messages/list-of-messages.component';
 
 
 export var routes:Routes=[
@@ -23,22 +25,30 @@ export var routes:Routes=[
                 path:'book/:bookid',
                 component:BookPageComponent
             },
-            
+            {
+              path:'message/:messageid',
+              component:MessageDetailsComponent
+           },
+
+           {
+            path:'messages',
+            component:ListOfMessagesComponent
+        },
             {
                 path:'books',
                 component:ListOfBooksComponent
             },
             {
-                path: 'shoppingCart', 
+                path: 'shoppingCart',
                 component:ShoppingCartComponent
             },
           {
                 path:'advsearch',
                 component:BookFinderComponent
-                
+
             }
         ]
-    },  
+    },
     {
         path:'home',
         redirectTo:''
@@ -59,10 +69,10 @@ export var routes:Routes=[
     path:'login',
     component:LoginComponent
   },
-    
+
     {
         path:'**',
         redirectTo:'/home'
     },
-    
+
 ];

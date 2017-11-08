@@ -22,6 +22,8 @@ import { RegisterComponent } from './user-profile/register/register.component';
 import { ChangePasswordComponent } from './user-profile/change-password/change-password.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ListOfMessagesComponent } from './list-of-messages/list-of-messages.component';
+import { MessageDetailsComponent } from './message-details/message-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { CategoriesComponent } from './categories/categories.component';
     LoginComponent,
     RegisterComponent,
     ChangePasswordComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ListOfMessagesComponent,
+    MessageDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+
+
+#btn{
+  float: right;
+  position: relative;
+  left: 60px;
+
+}
+
+#author{
+	margin: 5px;
+  text-decoration: bold;
+
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #000000;
+}
+#tytul{
+	margin: 5px;
+  text-decoration: underline;
+
+}
+#ikonka{
+  float: left;
+	margin: 5px;
+
+}
+
+li{
+  padding: 8px 16px;
+  border-bottom: 1px solid #000000
+}
+
+#data{
+  float: right;
+
+
+}

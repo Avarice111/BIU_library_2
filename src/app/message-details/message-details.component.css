@@ -1,0 +1,20 @@
+#msg {
+  border: 1px solid #000000;
+  margin: 10px;
+}
+#autor{
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+#tytul{
+  text-decoration: underline;
+}
+section{
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+}
+
+#data{
+  float: right;
+}
