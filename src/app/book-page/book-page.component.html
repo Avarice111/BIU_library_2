@@ -1,41 +1,41 @@
 <main>
 	<section>
 		<div id="title">
-
-		<p id=title >Nazwa książki</p>
-
+		<p id=title >{{detailedBook.title}}</p>
 		</div>
 	</section>
-	
-	
+
 	<section>
 		<div id="gallery">
-  
-			<img id="cover" src="http://img.freedisc.pl/photo/4603337/2/l/wiedzmin-sezon-burz-okladka.png" alt="Okładka książki" />
+
+			<img id="cover" src={{detailedBook.imgUrl}} alt="Okładka książki" />
 
 		</div>
 	</section>
-	
+  <br>
+  <section>
+    <div>spis tresci:</div>
+    <app-table-of-contents-component [tableOfContents]="detailedBook.tabOfCont"></app-table-of-contents-component>
+  </section>
+  <section>
+    <div>Opis:</div>
+      <p>{{detailedBook.description}}</p>
+  </section>
+  <section>
+    <div>pozycje podobne:</div>
+
+  </section>
+
 	<section>
 		<div id="buttons">
-  
 			<button id="addtobasket">Dodaj do koszyka</button>
 			<button id="reserve">Zarezerwuj</button>
-
 		</div>
 	</section>
-	
-	
 	<section>
 		<div id="description">
-  
-			
-			Oto nowy Sapkowski i nowy wiedźmin. Mistrz polskiej fantastyki znowu zaskakujeapkowski i nowy wiedźmin.
-			
-
+      Opis:
+      <p>{{detailedBook.description}}</p>
 		</div>
 	</section>
-	
-
-	
 </main>

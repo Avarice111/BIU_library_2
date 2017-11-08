@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {BooksCategoriesService} from "../categories/BooksCategoriesService";
-import {CategoriesModel} from "../categories/CategoriesModel";
-import {NewBook} from "./NewBook";
+import {Component, OnInit} from '@angular/core';
+import {BooksCategoriesService} from "../../view-models/BooksCategoriesService";
+import {CategoriesModel} from "../../view-models/CategoriesModel";
+import {DetailedBookItem} from "../../view-models/DetailedBookItem";
 
 @Component({
 
@@ -12,17 +12,17 @@ import {NewBook} from "./NewBook";
 export class AddBookFormComponent implements OnInit {
 
 
-
   public listOfCategories: CategoriesModel[];
   public listOfTags: string[];
   public selectedCategories: string[];
-  public listOfSubcategories:string[];
+  public listOfSubcategories: string[];
 
   private _isSubCategoriesVissible: boolean;
 
-  public book= new NewBook();
+  public book = new DetailedBookItem('imgUrl', 'tite', 'description');
 
-  constructor(private service: BooksCategoriesService) { }
+  constructor(private service: BooksCategoriesService) {
+  }
 
   ngOnInit() {
     this.listOfCategories = this.service.getListOfCategories();
