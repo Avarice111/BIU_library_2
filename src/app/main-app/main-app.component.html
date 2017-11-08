@@ -1,10 +1,16 @@
-<p>
+<div class="container">
+  <div class="row">
+      <!-- <main-app></main-app> -->
+      <div class="col">
+        <main-header></main-header>
+      </div>
 
-{{model.title}}
-{{model.author.name}}
-</p>
-<ul>
-  <li *ngFor="let letter of model.letters">
-    {{letter}}
-  </li>
-</ul>
+
+  </div>
+  <div class="row">
+      <div class="col"><app-categories></app-categories></div>
+      <div class="col-6">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

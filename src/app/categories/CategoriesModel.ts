@@ -1,4 +1,5 @@
-export class MenuListOfBooksModel {
+
+export class CategoriesModel{
   public name: string;
   public subCategories: string[]
 
