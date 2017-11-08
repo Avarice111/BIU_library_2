@@ -19,6 +19,8 @@ export class BookPageComponent implements OnInit {
 s
   ngOnInit() {
     this.route.params.subscribe(p => console.log(p.bookid));
+
+    // tutaj trzeba po tym book id wciagnac
     const jeden = new TableOfContents('podkategoria1', null);
     const dwa = new TableOfContents('podkategoria2', null);
     const data = [jeden, dwa ];
@@ -26,7 +28,7 @@ s
     const aa: TableOfContents[] = [glowna, jeden ];
     this.detailedBook = new DetailedBookItem(
       'http://cdn3.thumbs.common.smcloud.net/common/2/4/s/2401776Ajla.jpg/ru-1-r-640,0-n-2401776Ajla.jpg',
-      'Szpony i kły', 'Opis', aa  );
+      'Szpony i kły', 'Opis', aa ,1);
 
 
   }
