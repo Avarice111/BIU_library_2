@@ -3,7 +3,7 @@ import {TableOfContents} from './TableOfContents';
 
 export class DetailedBookItem extends BookItem
 {
-  public readonly isbn: number;
+
   public readonly author: string;
   public readonly description: string;
   public tags: string[];
@@ -13,8 +13,8 @@ export class DetailedBookItem extends BookItem
   public tabOfCont: TableOfContents[];
 
 
-  public constructor(imgUrl: string, title: string, description: string,tab:TableOfContents[]) {
-    super(imgUrl, title);
+  public constructor(imgUrl: string, title: string, description: string,tab:TableOfContents[], isbn: number) {
+    super(imgUrl, title, isbn );
     this.description = description;
     this.tags = ['tag1', 'tag2'];
     this.categorys = ['categorys1', 'categorys2'];
