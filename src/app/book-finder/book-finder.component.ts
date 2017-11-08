@@ -8,7 +8,12 @@ import { BookFinderModel } from './BookFinderModel';
 })
 export class BookFinderComponent implements OnInit {
 
-  finderModel: BookFinderModel;
+  finderModel = new BookFinderModel();
+
+  newFinderModel()
+  {
+    this.finderModel = new BookFinderModel();
+  }
   constructor() { }
 
   ngOnInit() {

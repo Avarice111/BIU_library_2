@@ -1,33 +1,31 @@
-<form method="post" action="">
+<form (ngSubmit)="onSubmit()" #bookFinderForm="ngForm">
 
 <div class="form-group">
 
 <fieldset>
 
 	<legend>Tytuł</legend>
-		<input type="text" name="tytul" />
+		<input type="text" name="title" [(ngModel)]="finderModel.title"/>
 
 	<legend>Autor</legend>
-		<input type="text" name="autor" />
+		<input type="text" name="author" [(ngModel)]="finderModel.author" />
 
 	<legend>Tag</legend>
-		<input type="text" name="tag" />
+		<input type="text" name="tag" [(ngModel)]="finderModel.tag" />
 
 	<legend>Gatunek</legend>
-		<select name="gatunek">
+		<select name="category" [(ngModel)]="finderModel.category">
 		<option *ngFor="let genre of finderModel.genre">{{genre}}</option>
 		</select>
-
+		<legend>Dostępność</legend>
+		<input type="radio" name="availability" value="available" [(ngModel)]="finderModel.availability" value="true"> Dostępne<br>
+		<input type="radio" name="availability" value="not_available" [(ngModel)]="finderModel.availability" value="false"> Niedostępne<br>
 </fieldset>
 </div>
 
 
 <div class="form-check">
-	<fieldset>
-	<legend>Dostępność</legend>
-	  <input type="radio" name="availability" value="available"> Dostępne<br>
-	  <input type="radio" name="availability" value="not_available"> Niedostępne<br>
-
+	<fieldset>		
 	</fieldset>
 </div>
 
@@ -35,6 +33,6 @@
 <fieldset>
 <legend>Opcje</legend>
 <input type="submit" value="Zapisz kryteria" />
-<input type="submit" value="Szukaj książek" />
+<button type="button" (click)="newBookFinder(); bookFinderForm.reset()">Szukaj książek</button>
 </fieldset>
 </form>
