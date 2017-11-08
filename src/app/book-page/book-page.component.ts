@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {DetailedBookItem} from '../../domain/DetailedBookItem';
+import {DetailedBookItem} from '../../view-models/DetailedBookItem';
 
 @Component({
   selector: 'app-book-page',

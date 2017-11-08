@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {BooksCategoriesService} from "../../domain/BooksCategoriesService";
-import {CategoriesModel} from "../../domain/CategoriesModel";
-import {DetailedBookItem} from "../../domain/DetailedBookItem";
+import {BooksCategoriesService} from "../../view-models/BooksCategoriesService";
+import {CategoriesModel} from "../../view-models/CategoriesModel";
+import {DetailedBookItem} from "../../view-models/DetailedBookItem";
 
 @Component({
 

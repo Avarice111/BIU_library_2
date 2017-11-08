@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoriesModel} from '../../domain/CategoriesModel';
-import {BooksCategoriesService} from '../../domain/BooksCategoriesService';
+import {CategoriesModel} from '../../view-models/CategoriesModel';
+import {BooksCategoriesService} from '../../view-models/BooksCategoriesService';
 import {ThrobberComponent} from '../throbber/throbber.component';
 
 @Component({
