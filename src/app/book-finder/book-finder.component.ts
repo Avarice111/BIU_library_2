@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookFinderModel } from './BookFinderModel';
 
 @Component({
   selector: 'app-book-finder',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookFinderComponent implements OnInit {
 
+  finderModel = new BookFinderModel();
+
+  newFinderModel()
+  {
+    this.finderModel = new BookFinderModel();
+  }
   constructor() { }
 
   ngOnInit() {
