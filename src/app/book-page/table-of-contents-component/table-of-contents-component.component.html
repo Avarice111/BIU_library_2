@@ -1,0 +1,8 @@
+<div>
+  <b>{{tableOfContents.name}}</b>
+  <div *ngIf="tableOfContents.listOfSubContents!=null">
+    <ul *ngFor="let cat of tableOfContents.listOfSubContents">
+      <li><app-table-of-contents-component [tableOfContents]="cat"></app-table-of-contents-component></li>
+    </ul>
+  </div>
+</div>

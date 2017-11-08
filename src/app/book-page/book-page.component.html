@@ -1,41 +1,37 @@
 <main>
-	<section>
-		<div id="title">
+  <section>
+    <div id="title">
+      <p id=title>{{detailedBook.title}}</p>
+    </div>
+  </section>
 
-		<p id=title >Nazwa książki</p>
+  <section>
+    <div id="gallery">
+      <img id="cover" src={{detailedBook.imgUrl}} alt="Okładka książki"/>
+    </div>
+  </section>
+  <br>
+  <section>
+    <div>spis tresci:</div>
+    <div *ngIf="detailedBook.tabOfCont!=null">
+      <ul *ngFor="let subcat of detailedBook.tabOfCont">
+       <li> <app-table-of-contents-component [tableOfContents]="subcat"></app-table-of-contents-component></li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>Opis:</div>
+    <p>{{detailedBook.description}}</p>
+  </section>
+  <section>
+    <div>pozycje podobne:</div>
 
-		</div>
-	</section>
-	
-	
-	<section>
-		<div id="gallery">
-  
-			<img id="cover" src="http://img.freedisc.pl/photo/4603337/2/l/wiedzmin-sezon-burz-okladka.png" alt="Okładka książki" />
+  </section>
 
-		</div>
-	</section>
-	
-	<section>
-		<div id="buttons">
-  
-			<button id="addtobasket">Dodaj do koszyka</button>
-			<button id="reserve">Zarezerwuj</button>
-
-		</div>
-	</section>
-	
-	
-	<section>
-		<div id="description">
-  
-			
-			Oto nowy Sapkowski i nowy wiedźmin. Mistrz polskiej fantastyki znowu zaskakujeapkowski i nowy wiedźmin.
-			
-
-		</div>
-	</section>
-	
-
-	
+  <section>
+    <div id="buttons">
+      <button id="addtobasket">Dodaj do koszyka</button>
+      <button id="reserve">Zarezerwuj</button>
+    </div>
+  </section>
 </main>

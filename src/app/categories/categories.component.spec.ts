@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import {CategoriesComponent} from './categories.component';
 import {ThrobberComponent} from '../throbber/throbber.component';
-import {CategoriesModel} from './CategoriesModel';
+import {CategoriesModel} from '../../view-models/CategoriesModel';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
