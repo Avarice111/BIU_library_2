@@ -1,0 +1,8 @@
+<div>
+  {{tableOfContents.name}}
+  <div *ngIf="tableOfContents.listOfSubContents!=null">
+    <div *ngFor="let cat of tableOfContents.listOfSubContents">
+      <p><app-table-of-contents-component [tableOfContents]="cat"></app-table-of-contents-component></p>
+    </div>
+  </div>
+</div>

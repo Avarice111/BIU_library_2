@@ -15,12 +15,7 @@
   <br>
   <section>
     <div>spis tresci:</div>
-    <li *ngFor="let cont  of detailedBook.tabOfCont">
-        <p>{{cont.name}}<p>
-            <div *ngIf="cont.tabOfCont!=null">
-              {{cont.tabOfCont.name}}
-            </div>
-
+    <app-table-of-contents-component [tableOfContents]="detailedBook.tabOfCont"></app-table-of-contents-component>
   </section>
   <section>
     <div>Opis:</div>
