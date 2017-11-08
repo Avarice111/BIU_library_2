@@ -52,10 +52,6 @@ export var routes:Routes=[
     component:RegisterComponent
   },
   {
-    path: 'shopping-cart', 
-    component:ShoppingCartComponent
-},
-  {
     path:'change-password',
     component:ChangePasswordComponent
   },
