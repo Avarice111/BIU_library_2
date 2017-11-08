@@ -9,7 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { HeaderComponent } from './header/header.component';
 import { BookPageComponent } from './book-page/book-page.component';
-import {BooksCategoriesService} from './categories/BooksCategoriesService';
+import {BooksCategoriesService} from '../domain/BooksCategoriesService';
 
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { ThrobberComponent } from './throbber/throbber.component';

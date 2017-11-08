@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {DetailedBookItem} from '../../domain/DetailedBookItem';
 
 @Component({
   selector: 'app-book-page',
@@ -8,10 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookPageComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  public detailedBook: DetailedBookItem ;
+
+  constructor(private route: ActivatedRoute) {
+
+  }
+
 
   ngOnInit() {
-    this.route.params.subscribe(p=>console.log(p.bookid));
+    this.route.params.subscribe(p => console.log(p.bookid));
 
   }
 
