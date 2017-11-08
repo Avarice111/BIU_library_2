@@ -15,11 +15,7 @@
 
 	<legend>Gatunek</legend>
 		<select name="gatunek">
-		<option></option>
-		<option>Fantastyka</option>
-		<option>Nowela</option>
-		<option>Powieść</option>
-		<option>Thriller</option>
+		<option *ngFor="let genre of finderModel.genre">{{genre}}</option>
 		</select>
 
 </fieldset>
