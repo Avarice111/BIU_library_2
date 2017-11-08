@@ -19,7 +19,7 @@ export class AddBookFormComponent implements OnInit {
 
   private _isSubCategoriesVissible: boolean;
 
-  public book = new DetailedBookItem('imgUrl', 'tite', 'description');
+  public book = new DetailedBookItem('imgUrl', 'tite', 'description',null );
 
   constructor(private service: BooksCategoriesService) {
   }
