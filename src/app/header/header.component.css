@@ -5,12 +5,3 @@
     weight: 100%;
 
 }
-
-.sc{
-    position: absolute;
-    right: 30px;
-}
-
-.sc:hover{
-    border: 3px outset gray;
-}
