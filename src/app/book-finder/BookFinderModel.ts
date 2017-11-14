@@ -1,4 +1,6 @@
-import { CategoriesModel } from '../categories/CategoriesModel';
+import { CategoriesModel } from "../../view-models/CategoriesModel";
+
+
 
 export class BookFinderModel
 {
