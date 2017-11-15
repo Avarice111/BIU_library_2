@@ -1,0 +1,17 @@
+<div class="listOfMessages">
+    <b>Wiadomości:</b>
+  <ul>
+
+
+      <li id=lista *ngFor="let message of listOfMessages">
+         <img style="width:50px; height:50px" id=ikonka src="{{message.imgUrl}}" alt="Ikona profilu">
+           <p id=data>{{message.adddate}}</p>
+           <p id=author>{{message.author}}</p>
+           <button id=btn routerLink="/message/4" routerLinkActive="active">Szczegóły</button>
+           <p id=tytul>{{message.title}}</p>
+
+
+       </li>
+
+  </ul>
+</div>
