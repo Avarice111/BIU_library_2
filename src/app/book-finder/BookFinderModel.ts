@@ -1,4 +1,4 @@
-import { CategoriesModel } from '../categories/CategoriesModel';
+//import { CategoriesModel } from '..categories/CategoriesModel';
 
 export class BookFinderModel
 {
@@ -6,7 +6,7 @@ export class BookFinderModel
         public title?: string,
         public author?: string,
         public tag?: string,
-        public genre?: CategoriesModel,
+       // public genre?: CategoriesModel,
         public availability?: boolean,
     ){}
 }

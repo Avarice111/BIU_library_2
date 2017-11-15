@@ -1,0 +1,28 @@
+.row
+{
+    padding: 20px;    
+}
+ 
+.btn
+{
+    margin-top: 20px;
+}
+
+.btn:hover{
+    background-color: #99CCFF;
+    transform:scale(1.05);
+    transition-duration: 0.5s;
+}
+
+input
+{
+    background-color: #99CCFF;  
+     
+}
+
+input:focus
+{
+    background-color: #99CCFF;
+    border: 3px inset white; 
+   
+}

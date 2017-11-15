@@ -29,10 +29,7 @@ export let routes: Routes = [
                 path: 'books',
                 component: ListOfBooksComponent
             },
-            {
-                path: 'shoppingCart',
-                component: ShoppingCartComponent
-            },
+            
           {
                 path: 'advsearch',
                 component: BookFinderComponent
@@ -63,6 +60,10 @@ export let routes: Routes = [
   {
     path: 'add-book',
     component: AddBookFormComponent
+  },
+  {
+    path: 'shopping-cart',
+    component: ShoppingCartComponent
   },
 
     {
