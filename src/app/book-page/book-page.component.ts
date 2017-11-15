@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {DetailedBookItem} from '../../view-models/DetailedBookItem';
+import {TableOfContents} from '../../view-models/TableOfContents';
 
 @Component({
   selector: 'app-book-page',
@@ -8,10 +10,26 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookPageComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  public detailedBook: DetailedBookItem ;
 
+  constructor(private route: ActivatedRoute) {
+
+  }
+
+s
   ngOnInit() {
-    this.route.params.subscribe(p=>console.log(p.bookid));
+    this.route.params.subscribe(p => console.log(p.bookid));
+
+    // tutaj trzeba po tym book id wciagnac
+    const jeden = new TableOfContents('podkategoria1', null);
+    const dwa = new TableOfContents('podkategoria2', null);
+    const data = [jeden, dwa ];
+    const glowna = new TableOfContents('glowna', data);
+    const aa: TableOfContents[] = [glowna, jeden ];
+    this.detailedBook = new DetailedBookItem(
+      'http://cdn3.thumbs.common.smcloud.net/common/2/4/s/2401776Ajla.jpg/ru-1-r-640,0-n-2401776Ajla.jpg',
+      'Szpony i kły', 'Opis', aa ,1);
+
 
   }
 

@@ -9,7 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ListOfBooksComponent } from './list-of-books/list-of-books.component';
 import { HeaderComponent } from './header/header.component';
 import { BookPageComponent } from './book-page/book-page.component';
-import {BooksCategoriesService} from './categories/BooksCategoriesService';
+import {BooksCategoriesService} from '../view-models/BooksCategoriesService';
 
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { ThrobberComponent } from './throbber/throbber.component';
@@ -24,6 +24,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ListOfMessagesComponent } from './list-of-messages/list-of-messages.component';
 import { MessageDetailsComponent } from './message-details/message-details.component';
+import { TableOfContentsComponentComponent } from './book-page/table-of-contents-component/table-of-contents-component.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
     ChangePasswordComponent,
     ShoppingCartComponent,
     ListOfMessagesComponent,
-    MessageDetailsComponent
+    MessageDetailsComponent,
+    TableOfContentsComponentComponent,
   ],
   imports: [
     BrowserModule,
