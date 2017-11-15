@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {BooksCategoriesService} from "../categories/BooksCategoriesService";
 import {CategoriesModel} from "../categories/CategoriesModel";
 import {NewBook} from "./NewBook";
+import {BookBuilderDirector} from "../BookService";
+import {showWarningOnce} from "tslint/lib/error";
 
 @Component({
 
@@ -16,11 +18,16 @@ export class AddBookFormComponent implements OnInit {
   public listOfCategories: CategoriesModel[];
   public listOfTags: string[];
   public selectedCategories: string[];
-  public listOfSubcategories:string[];
+  public listOfSubcategories: string[];
 
   private _isSubCategoriesVissible: boolean;
 
-  public book= new NewBook();
+  private _book = BookBuilderDirector.construct("test" ,5 ,"test" );
+
+
+  get book(): NewBook {
+    return this._book;
+  }
 
   constructor(private service: BooksCategoriesService) { }
 
