@@ -5,3 +5,16 @@
     weight: 100%;
 
 }
+.row-view
+{
+  display: table;
+  width: 100%;
+}
+.baby
+{
+  display: table-cell;
+}
+.right-align
+{
+  float:right;
+}
