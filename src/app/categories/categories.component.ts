@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CategoriesModel} from '../../view-models/CategoriesModel';
 import {BooksCategoriesService} from '../../view-models/BooksCategoriesService';
 import {ThrobberComponent} from '../throbber/throbber.component';
+import { CategoryHttpClient } from './CategoryHttpClient';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -9,22 +10,20 @@ import {ThrobberComponent} from '../throbber/throbber.component';
 })
 export class CategoriesComponent implements OnInit {
 
-  listOfCategories: CategoriesModel[];
-  public isLoading: boolean;
+  categories: CategoriesModel[];
+  
 
 
-  constructor(private service: BooksCategoriesService, private httpClient: CategoryHttpClient) {
+  constructor(private httpClient: CategoryHttpClient) {
   }
 
   ngOnInit() {
-    this.isLoading = true;
-    this.listOfCategories =  this.service.getListOfCategories();
-    this.isLoading = false;
+    this.getCategories();
   }
 
   getCategories(): void {
-    this.httpClient.get
-    .subscribe(heroes => this.heroes = heroes);
+    this.httpClient.getCategories()
+    .subscribe(categories => this.categories = categories);
   }
 
 }

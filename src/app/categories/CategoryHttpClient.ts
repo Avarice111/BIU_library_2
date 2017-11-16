@@ -6,8 +6,9 @@ import { CategoryModel } from './CategoryModel';
 import { catchError, map, tap } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 
-import { HttpClient } from '@angular/common/http/src/client';
+
 import { HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
