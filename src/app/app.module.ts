@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
 import { MainAppComponent } from './main-app/main-app.component';
@@ -25,6 +28,9 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ListOfMessagesComponent } from './list-of-messages/list-of-messages.component';
 import { MessageDetailsComponent } from './message-details/message-details.component';
 import { TableOfContentsComponentComponent } from './book-page/table-of-contents-component/table-of-contents-component.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { CategoryData} from './categories/CategoryData';
+
 
 
 @NgModule({
@@ -52,7 +58,11 @@ import { TableOfContentsComponentComponent } from './book-page/table-of-contents
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      CategoryData, { dataEncapsulation: false }
+    )
   ],
   providers: [BooksCategoriesService],
   bootstrap: [AppComponent]
