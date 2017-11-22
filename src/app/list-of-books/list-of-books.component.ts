@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookItem } from '../../view-models/BookItem';
 import {ActivatedRoute, Params} from '@angular/router';
+import { BooksService } from './books.service';
 
 @Component({
   selector: 'list-of-books',
@@ -19,13 +20,14 @@ export class ListOfBooksComponent implements OnInit {
 
   category: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private booksService: BooksService) { }
 
   ngOnInit() {
 
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
       this.category = params['category'];
+      this.booksService.getBooks().subscribe(item=>console.log(item));
     });
 
 
