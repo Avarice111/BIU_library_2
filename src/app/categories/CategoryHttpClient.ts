@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { CategoryModel } from './CategoryModel';
 
@@ -16,6 +15,7 @@ const httpOptions = {
 
 @Injectable()
 export class CategoryHttpClient
+// tslint:disable-next-line:one-line
 {
    private categoriesUrl = 'api/categories';
 
