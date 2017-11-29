@@ -1,6 +1,7 @@
 <div class="listOfBooks">
-  <ul>
-    <li *ngFor="let book of listOfBooks">
+  <app-throbber *ngIf="isLoading"></app-throbber>
+  <ul *ngIf="!isLoading" >
+    <li *ngFor="let book of model">
       <p>{{book.title}}</p>
       <img style="width:100px; height:100px" src="{{book.imgUrl}}" alt="{{book.title}">
       <button routerLink="/shoppingCart">Zarezerwuj</button>
