@@ -11,13 +11,17 @@ import {TableOfContents} from '../../view-models/TableOfContents';
 export class BookPageComponent implements OnInit {
 
   public detailedBook: DetailedBookItem ;
+  isLoading = true;
+
 
   constructor(private route: ActivatedRoute) {
 
   }
 
-s
   ngOnInit() {
+
+    this.isLoading = true;
+
     this.route.params.subscribe(p => console.log(p.bookid));
 
     // tutaj trzeba po tym book id wciagnac
@@ -30,7 +34,7 @@ s
       'http://cdn3.thumbs.common.smcloud.net/common/2/4/s/2401776Ajla.jpg/ru-1-r-640,0-n-2401776Ajla.jpg',
       'Szpony i kły', 'Opis', aa ,1);
 
-
+    this.isLoading=false;
   }
 
 }
