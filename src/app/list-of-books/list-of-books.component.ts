@@ -27,12 +27,13 @@ export class ListOfBooksComponent implements OnInit {
 
   ngOnInit() {
     // subscribe to router event
-    this.isLoading = true;
+    //this.isLoading = true;
 
-    this.activatedRoute.params.subscribe((params: Params) => {
-      this.category = params['category'];
-      this.booksService.getBooks().subscribe(item => console.log(item));
-    });
+   // this.activatedRoute.params.subscribe((params: Params) => {
+    //  this.category = params['category'];
+      this.booksService.getBooks()
+        .subscribe(items=>this.listOfBooks=items);
+   /* });
     if (this.category != null)
     {
       if (this.category.length)
@@ -47,7 +48,7 @@ export class ListOfBooksComponent implements OnInit {
       this.model = list;
       this.isLoading = false;
     });
-
+*/
 
   }
 
