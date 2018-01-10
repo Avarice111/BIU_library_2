@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {BooksCategoriesService} from '../../view-models/BooksCategoriesService';
 import {CategoriesModel} from '../../view-models/CategoriesModel';
 import {DetailedBookItem} from '../../view-models/DetailedBookItem';
+import { BooksService } from '../list-of-books/books.service';
+import { BookItem } from '../../view-models/BookItem';
 
 @Component({
 
@@ -12,20 +14,19 @@ import {DetailedBookItem} from '../../view-models/DetailedBookItem';
 export class AddBookFormComponent implements OnInit {
 
 
-  public listOfCategories: CategoriesModel[];
-  public listOfTags: string[];
-  public selectedCategories: string[];
-  public listOfSubcategories: string[];
 
-  private _isSubCategoriesVissible: boolean;
+  public book :BookItem =new BookItem(`http://ecsmedia.pl/c/pan-tadeusz-b-iext44008692.jpg`,"",0);
 
-  public book = new DetailedBookItem('imgUrl', 'tite', 'description', null , 1);
-
-  constructor(private service: BooksCategoriesService) {
+  constructor(private service: BooksCategoriesService,
+            private booksService: BooksService) {
   }
 
   ngOnInit() {
-    this.listOfCategories = this.service.getListOfCategories();
+  }
+
+  public save():void{
+    this.booksService.addBoook(this.book)
+    .subscribe(r=>console.log(r));
   }
 
 }

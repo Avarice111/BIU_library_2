@@ -17,4 +17,8 @@ export class BooksService {
       
   }
 
+  public addBoook(book:BookItem):Observable<any>{
+    return this.http
+      .post("http://localhost:54730/api/Books",book);
+  }
 }
