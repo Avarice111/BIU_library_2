@@ -14,9 +14,7 @@ import {BooksService} from './books.service';
 })
 export class ListOfBooksComponent implements OnInit {
 
-
-
-  listOfBooks$= new Observable<BookItem[]>();
+  listOfBooks= new Observable<BookItem[]>();
   category: string;
   isLoading= true;
   model: BookItem[]= [];
@@ -27,12 +25,15 @@ export class ListOfBooksComponent implements OnInit {
 
   ngOnInit() {
     // subscribe to router event
-    //this.isLoading = true;
+    this.isLoading = true;
 
    // this.activatedRoute.params.subscribe((params: Params) => {
     //  this.category = params['category'];
       this.booksService.getBooks()
-        .subscribe(items=>this.listOfBooks=items);
+        .subscribe(items=>{
+          this.model=items;
+          this.isLoading=false;
+        });
    /* });
     if (this.category != null)
     {
