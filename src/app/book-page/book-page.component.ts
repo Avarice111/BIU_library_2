@@ -29,8 +29,8 @@ s
     this.detailedBook = new DetailedBookItem(
       'http://cdn3.thumbs.common.smcloud.net/common/2/4/s/2401776Ajla.jpg/ru-1-r-640,0-n-2401776Ajla.jpg',
       'Szpony i kły', 'Opis', aa ,1);
-
-
+      let tst = JSON.parse(window.localStorage.getItem("test"))
+      console.log(tst);
   }
 
 }

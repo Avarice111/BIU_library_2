@@ -27,7 +27,8 @@ export class ListOfBooksComponent implements OnInit {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
       this.category = params['category'];
-      this.booksService.getBooks().subscribe(item=>console.log(item));
+      this.booksService.getBooks()
+        .subscribe(items=>this.listOfBooks=items);
     });
 
 
