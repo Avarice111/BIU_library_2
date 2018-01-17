@@ -1,13 +1,13 @@
 <div>
 <h4>Kategorie</h4>
-<div class="btn-group" *ngFor="let category of listOfCategories">
+<div class="btn-group" *ngFor="let category of model">
   <div class="dropdown" >
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
       {{category.name}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-      <a *ngFor="let subCategory of category.subCategories" class="dropdown-item" routerLink="/books/{{subCategory}}">{{subCategory}}</a>
+      <a *ngFor="let subCategory of category.parentCategories" class="dropdown-item" routerLink="/books/{{subCategory}}">{{subCategory}}</a>
     </div>
   </div>
 </div>

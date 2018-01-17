@@ -30,6 +30,7 @@ import { TableOfContentsComponentComponent } from './book-page/table-of-contents
 import { InMemBooksService } from './books.inmemory.service';
 import { BooksService } from './list-of-books/books.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoryService } from './categories/category.service';
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientInMemoryWebApiModule.forRoot(InMemBooksService),
     RouterModule.forRoot(routes)
   ],
-  providers: [BooksCategoriesService,BooksService],
+  providers: [BooksCategoriesService,BooksService,CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
